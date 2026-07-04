@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: hospital-app
+  name: hospital-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hospital-app
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: hospital-app
+    spec:
+      containers:
+      - image: maariamaartin31/hospital-app:latest
+        name: hospital-app
+        resources: {}
+status: {}
